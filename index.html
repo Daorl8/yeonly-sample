@@ -42,9 +42,11 @@
 @font-face{ font-family:"YL Sans"; src:url("yl-pretendard-v01.woff2") format("woff2"); font-weight:300 700; font-display:swap; }
 :root{
   --paper:#FBF6F0;      /* 로고 바탕 크림 */
-  --lav:#F9EDEE;        /* 옅은 핑크 면 (v0.1.1 연보라 → 핑크 · 다올) */
+  --pink-l:#F9EDEE;     /* 옅은 핑크 면 (v0.1.1 연보라 → 핑크 · 다올) */
   --pink:#F8E4E9;       /* 연분홍 줄무늬 */
-  --lav-s:#F0D3D9;      /* 진한 쪽 핑크 줄무늬 (v0.1.1) */
+  --pink-s:#F0D3D9;     /* 진한 쪽 핑크 줄무늬 (v0.1.1) */
+  /* 4각 별(v0.1.4 · ✦ 글자가 사이트 폰트에 없어 SVG 모양으로 · 색은 currentColor) */
+  --star:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 0C13 8 16 11 24 12C16 13 13 16 12 24C11 16 8 13 0 12C8 11 11 8 12 0Z'/%3E%3C/svg%3E");
   --ink:#3B2F33;        /* 11.9:1 */
   --soft:#6E6066;       /* 5.5:1 */
   --rose:#B07078;       /* 로고 장미색 — 큰 글자 · 장식만(3.6:1) */
@@ -65,9 +67,9 @@ a{ color:inherit; }
 .wrap{ width:min(100% - 40px, 1120px); margin:0 auto; }
 .sr{ position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap; }
 
-/* 줄무늬 띠 (사장님 피드의 연분홍 · 연보라 세로 줄무늬) */
+/* 줄무늬 띠 (사장님 피드의 세로 줄무늬 · v0.1.1부터 핑크 두 단계) */
 .stripe{ height:22px; background:repeating-linear-gradient(90deg, var(--pink) 0 14px, var(--paper) 14px 28px); }
-.stripe.lav{ background:repeating-linear-gradient(90deg, var(--lav-s) 0 14px, var(--paper) 14px 28px); }
+.stripe.deep{ background:repeating-linear-gradient(90deg, var(--pink-s) 0 14px, var(--paper) 14px 28px); }
 
 /* 헤더 */
 .top{ position:sticky; top:0; z-index:50; background:var(--paper); border-bottom:1px solid var(--line); }
@@ -97,12 +99,12 @@ a{ color:inherit; }
 
 /* 라벨 · 제목 */
 .label{ display:flex; align-items:center; gap:10px; margin:0; font-family:var(--serif); font-style:italic; font-size:1.15rem; color:var(--rose-d); }
-.label::before{ content:"\2726"; font-style:normal; font-size:.8rem; color:var(--rose); }
+.label::before{ content:""; flex:none; width:.7rem; height:.7rem; color:var(--rose); background:currentColor; -webkit-mask:var(--star) center/contain no-repeat; mask:var(--star) center/contain no-repeat; }
 .label .ko{ font-family:var(--sans); font-style:normal; font-size:.8rem; color:var(--soft); }
 h2{ font-family:var(--sans); font-weight:600; font-size:clamp(1.5rem, 4.6vw, 2.2rem); line-height:1.4; letter-spacing:-.02em; margin:12px 0 0; }
 .lead{ margin:14px 0 0; color:var(--soft); max-width:36em; }
 .sec{ padding:clamp(64px, 10vw, 120px) 0; }
-.sec.lav{ background:var(--lav); }
+.sec.tint{ background:var(--pink-l); }
 
 /* 히어로 */
 .hero{ padding:clamp(28px, 5vw, 64px) 0 clamp(40px, 6vw, 80px); }
@@ -114,7 +116,7 @@ h2{ font-family:var(--sans); font-weight:600; font-size:clamp(1.5rem, 4.6vw, 2.2
 .hero .sub{ margin:12px 0 0; color:var(--soft); }
 .hero .pts{ list-style:none; padding:0; margin:22px 0 0; border-top:1px solid var(--line); }
 .hero .pts li{ display:flex; gap:10px; padding:10px 0; border-bottom:1px solid var(--line); font-size:.95rem; font-weight:500; }
-.hero .pts li::before{ content:"\2726"; color:var(--rose); font-size:.75rem; line-height:2.2; }
+.hero .pts li::before{ content:""; flex:none; width:.62rem; height:.62rem; margin-top:.58em; color:var(--rose); background:currentColor; -webkit-mask:var(--star) center/contain no-repeat; mask:var(--star) center/contain no-repeat; }
 @media (min-width:900px){ .hero .wrap{ grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:64px; } }
 
 /* 폴라로이드 */
@@ -122,7 +124,7 @@ h2{ font-family:var(--sans); font-weight:600; font-size:clamp(1.5rem, 4.6vw, 2.2
 .pola img{ width:100%; aspect-ratio:1/1; object-fit:cover; }
 .pola::before{ content:""; position:absolute; top:-10px; left:50%; width:70px; height:22px; transform:translateX(-50%) rotate(-3deg); background:rgba(240,211,217,.85); }
 .pola.pk::before{ background:rgba(244,232,218,.92); }
-.pola::after{ content:"\2726"; position:absolute; right:12px; bottom:8px; color:var(--rose); font-size:.85rem; }
+.pola::after{ content:""; position:absolute; right:12px; bottom:11px; width:.72rem; height:.72rem; color:var(--rose); background:currentColor; -webkit-mask:var(--star) center/contain no-repeat; mask:var(--star) center/contain no-repeat; }
 .stack{ position:relative; display:grid; grid-template-columns:repeat(6, minmax(0,1fr)); align-items:start; padding:16px 4px 0; }
 .stack .pola:nth-child(1){ grid-column:1 / span 4; grid-row:1; transform:rotate(-4deg); z-index:2; }
 .stack .pola:nth-child(2){ grid-column:3 / span 4; grid-row:1; margin-top:40%; transform:rotate(3deg); z-index:3; }
@@ -141,7 +143,7 @@ h2{ font-family:var(--sans); font-weight:600; font-size:clamp(1.5rem, 4.6vw, 2.2
 .steps li{ position:relative; padding:24px 22px; background:#FFFFFF; border:1px solid var(--line); border-radius:var(--r); }
 .steps .no{ font-family:var(--serif); font-style:italic; font-size:1.05rem; color:var(--rose-d); }
 .steps h3{ margin:6px 0 0; font-size:1.2rem; font-weight:600; }
-.steps h3 small{ display:block; margin-top:2px; font-family:var(--serif); font-style:italic; font-weight:400; font-size:1rem; color:var(--soft); }
+.steps h3 small{ display:block; margin-top:4px; font-family:var(--sans); font-style:normal; font-weight:400; font-size:.88rem; color:var(--soft); }
 .steps p{ margin:12px 0 0; font-size:.93rem; color:var(--soft); }
 .steps .pr{ margin-top:14px; padding-top:12px; border-top:1px dashed var(--line); font-family:var(--serif); font-size:1.6rem; line-height:1; color:var(--ink); }
 .steps .pr small{ font-family:var(--sans); font-size:.8rem; margin-left:2px; }
@@ -164,7 +166,6 @@ h2{ font-family:var(--sans); font-weight:600; font-size:clamp(1.5rem, 4.6vw, 2.2
 .ext p{ grid-column:1; margin:6px 0 0; font-size:.93rem; color:var(--soft); }
 .ext .pr{ grid-column:2; grid-row:1; font-family:var(--serif); font-size:1.45rem; line-height:1.2; white-space:nowrap; }
 .ext .pr small{ font-family:var(--sans); font-size:.78rem; margin-left:2px; }
-.ext .thick{ display:inline-block; margin-top:8px; padding:2px 10px; background:var(--lav); border-radius:var(--r); font-size:.84rem; color:var(--ink); }
 @media (min-width:900px){ .ext li{ grid-template-columns:240px minmax(0,1fr) auto; align-items:baseline; } .ext p{ grid-column:2; grid-row:1; margin:0; } .ext .pr{ grid-column:3; } }
 
 /* 시술 사진 */
@@ -191,7 +192,7 @@ h2{ font-family:var(--sans); font-weight:600; font-size:clamp(1.5rem, 4.6vw, 2.2
 .book .about{ margin:18px 0 0; font-size:1rem; }
 .book ul{ list-style:none; padding:0; margin:22px 0 0; display:grid; gap:0; border-top:1px solid var(--ink); }
 .book ul li{ display:flex; gap:10px; padding:12px 0; border-bottom:1px solid rgba(59,47,51,.14); font-weight:500; }
-.book ul li::before{ content:"\2726"; color:var(--rose); font-size:.75rem; line-height:2.2; }
+.book ul li::before{ content:""; flex:none; width:.62rem; height:.62rem; margin-top:.58em; color:var(--rose); background:currentColor; -webkit-mask:var(--star) center/contain no-repeat; mask:var(--star) center/contain no-repeat; }
 .hours{ width:100%; border-collapse:collapse; }
 .hours caption{ text-align:left; padding-bottom:8px; }
 .hours th, .hours td{ text-align:left; padding:14px 0; border-bottom:1px solid rgba(59,47,51,.14); font-weight:400; }
@@ -208,11 +209,11 @@ h2{ font-family:var(--sans); font-weight:600; font-size:clamp(1.5rem, 4.6vw, 2.2
 .visit dd{ margin:2px 0 0; padding-bottom:16px; border-bottom:1px solid var(--line); }
 .visit dd p{ margin:0 0 4px; }
 .visit dd a{ color:var(--rose-d); text-underline-offset:3px; }
-.map{ width:100%; height:300px; border:0; border-radius:var(--r); background:var(--lav); }
+.map{ width:100%; height:300px; border:0; border-radius:var(--r); background:var(--pink-l); }
 @media (min-width:768px){ .visit{ grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:56px; } .map{ height:100%; min-height:420px; } }
 
 /* 푸터 · 하단 바 */
-.foot{ padding:48px 0 40px; text-align:center; background:var(--lav); }
+.foot{ padding:48px 0 40px; text-align:center; background:var(--pink-l); }
 .foot img{ width:150px; margin:0 auto; }
 .foot p{ margin:14px 0 0; font-size:.88rem; color:var(--soft); }
 .foot nav{ display:flex; flex-wrap:wrap; justify-content:center; gap:6px 18px; margin-top:16px; }
@@ -232,7 +233,7 @@ h2{ font-family:var(--sans); font-weight:600; font-size:clamp(1.5rem, 4.6vw, 2.2
 <body>
 <header class="top" id="top">
   <div class="wrap bar">
-    <a class="logo" href="#top" aria-label="연리뷰티 yeonly beauty 처음으로"><img src="yl-wordmark.png" alt="yeonly beauty" width="420" height="242" /></a>
+    <a class="logo" href="#top" aria-label="연리뷰티 yeonly beauty 처음으로"><img src="yl-wordmark.webp" alt="yeonly beauty" width="420" height="242" /></a>
     <nav class="nav" aria-label="섹션">
       <a href="#perm">Perm</a><a href="#extension">Extension</a><a href="#works">Works</a><a href="#price">Price</a><a href="#visit">Visit</a>
     </nav>
@@ -247,7 +248,7 @@ h2{ font-family:var(--sans); font-weight:600; font-size:clamp(1.5rem, 4.6vw, 2.2
   <section class="hero" aria-labelledby="hero-h">
     <div class="wrap">
       <div>
-        <h1 id="hero-h"><img src="yl-logo.png" alt="yeonly beauty since 2022" width="560" height="460" fetchpriority="high" /><span class="sr">연리뷰티</span></h1>
+        <h1 id="hero-h"><img src="yl-logo.webp" alt="yeonly beauty since 2022" width="560" height="460" fetchpriority="high" /><span class="sr">연리뷰티</span></h1>
         <p class="tag">천안 신방동•쌍용동•용곡동 <span class="nw">속눈썹 펌 • 연장 전문샵</span></p>
         <p class="sub">편안하게 1인 예약으로 관리받는 <span class="nw">속눈썹 샵입니다 :)</span></p>
         <ul class="pts">
@@ -270,7 +271,7 @@ h2{ font-family:var(--sans); font-weight:600; font-size:clamp(1.5rem, 4.6vw, 2.2
 
   <div class="stripe" aria-hidden="true"></div>
 
-  <section class="sec lav" id="perm" aria-labelledby="perm-h">
+  <section class="sec tint" id="perm" aria-labelledby="perm-h">
     <div class="wrap">
       <p class="label reveal">Perm<span class="ko">속눈썹 펌</span></p>
       <h2 id="perm-h" class="reveal">펌 메뉴</h2>
@@ -298,7 +299,7 @@ h2{ font-family:var(--sans); font-weight:600; font-size:clamp(1.5rem, 4.6vw, 2.2
     </div>
   </section>
 
-  <div class="stripe lav" aria-hidden="true"></div>
+  <div class="stripe deep" aria-hidden="true"></div>
 
   <section class="sec" id="extension" aria-labelledby="ext-h">
     <div class="wrap">
@@ -335,7 +336,7 @@ h2{ font-family:var(--sans); font-weight:600; font-size:clamp(1.5rem, 4.6vw, 2.2
 
   <div class="stripe" aria-hidden="true"></div>
 
-  <section class="sec lav" id="works" aria-labelledby="works-h">
+  <section class="sec tint" id="works" aria-labelledby="works-h">
     <div class="wrap">
       <p class="label reveal">Works<span class="ko">시술 사진</span></p>
       <h2 id="works-h" class="reveal">눈매에 맞춰 <span class="nw">원하시는 컬링으로</span></h2>
@@ -351,7 +352,7 @@ h2{ font-family:var(--sans); font-weight:600; font-size:clamp(1.5rem, 4.6vw, 2.2
     </div>
   </section>
 
-  <div class="stripe lav" aria-hidden="true"></div>
+  <div class="stripe deep" aria-hidden="true"></div>
 
   <section class="sec" id="price" aria-labelledby="price-h">
     <div class="wrap">
@@ -388,7 +389,7 @@ h2{ font-family:var(--sans); font-weight:600; font-size:clamp(1.5rem, 4.6vw, 2.2
 
   <div class="stripe" aria-hidden="true"></div>
 
-  <section class="sec lav" id="booking" aria-labelledby="book-h">
+  <section class="sec tint" id="booking" aria-labelledby="book-h">
     <div class="wrap book">
       <div>
         <p class="label reveal">Booking<span class="ko">예약 안내</span></p>
@@ -416,7 +417,7 @@ h2{ font-family:var(--sans); font-weight:600; font-size:clamp(1.5rem, 4.6vw, 2.2
     </div>
   </section>
 
-  <div class="stripe lav" aria-hidden="true"></div>
+  <div class="stripe deep" aria-hidden="true"></div>
 
   <section class="sec" id="visit" aria-labelledby="visit-h">
     <div class="wrap">
@@ -444,7 +445,7 @@ h2{ font-family:var(--sans); font-weight:600; font-size:clamp(1.5rem, 4.6vw, 2.2
 <div class="stripe" aria-hidden="true"></div>
 <footer class="foot">
   <div class="wrap">
-    <img src="yl-wordmark.png" alt="yeonly beauty" width="420" height="242" loading="lazy" />
+    <img src="yl-wordmark.webp" alt="yeonly beauty" width="420" height="242" loading="lazy" />
     <p>연리뷰티 · 충남 천안시 동남구 <span class="nw">새말4길 6</span> <span class="nw">상가동 106호</span><br />월 – 일 10:00 – 20:30 <span class="nw">(예약에 따라 변동)</span></p>
     <nav aria-label="푸터 링크">
       <a href="https://open.kakao.com/o/sMAdmHXe" target="_blank" rel="noopener">오픈카톡</a>
