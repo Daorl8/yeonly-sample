@@ -42,9 +42,9 @@
 @font-face{ font-family:"YL Sans"; src:url("yl-pretendard-v01.woff2") format("woff2"); font-weight:300 700; font-display:swap; }
 :root{
   --paper:#FBF6F0;      /* 로고 바탕 크림 */
-  --lav:#F3ECF6;        /* 연보라 면 */
+  --lav:#F9EDEE;        /* 옅은 핑크 면 (v0.1.1 연보라 → 핑크 · 다올) */
   --pink:#F8E4E9;       /* 연분홍 줄무늬 */
-  --lav-s:#E6DBF0;      /* 연보라 줄무늬 */
+  --lav-s:#F0D3D9;      /* 진한 쪽 핑크 줄무늬 (v0.1.1) */
   --ink:#3B2F33;        /* 11.9:1 */
   --soft:#6E6066;       /* 5.5:1 */
   --rose:#B07078;       /* 로고 장미색 — 큰 글자 · 장식만(3.6:1) */
@@ -119,8 +119,8 @@ h2{ font-family:var(--sans); font-weight:600; font-size:clamp(1.5rem, 4.6vw, 2.2
 /* 폴라로이드 */
 .pola{ margin:0; padding:10px 10px 34px; background:#FFFFFF; box-shadow:0 10px 26px rgba(59,47,51,.12); border-radius:var(--r); position:relative; }
 .pola img{ width:100%; aspect-ratio:1/1; object-fit:cover; }
-.pola::before{ content:""; position:absolute; top:-10px; left:50%; width:70px; height:22px; transform:translateX(-50%) rotate(-3deg); background:rgba(230,219,240,.85); }
-.pola.pk::before{ background:rgba(248,228,233,.9); }
+.pola::before{ content:""; position:absolute; top:-10px; left:50%; width:70px; height:22px; transform:translateX(-50%) rotate(-3deg); background:rgba(240,211,217,.85); }
+.pola.pk::before{ background:rgba(244,232,218,.92); }
 .pola::after{ content:"\2726"; position:absolute; right:12px; bottom:8px; color:var(--rose); font-size:.85rem; }
 .stack{ position:relative; display:grid; grid-template-columns:repeat(6, minmax(0,1fr)); align-items:start; padding:16px 4px 0; }
 .stack .pola:nth-child(1){ grid-column:1 / span 4; grid-row:1; transform:rotate(-4deg); z-index:2; }
@@ -134,7 +134,7 @@ h2{ font-family:var(--sans); font-weight:600; font-size:clamp(1.5rem, 4.6vw, 2.2
 }
 
 /* Cormorant 숫자는 기본이 올드스타일 → 가격 · 번호는 세운 숫자로 */
-.steps .pr, .steps .no, .ext .pr, .label{ font-variant-numeric:lining-nums; }
+.steps .pr, .steps .no, .steps h3 small, .ext .pr, .label, .price h3{ font-variant-numeric:lining-nums; }
 /* 펌 3단계 */
 .steps{ list-style:none; padding:0; margin:44px 0 0; display:grid; gap:14px; }
 .steps li{ position:relative; padding:24px 22px; background:#FFFFFF; border:1px solid var(--line); border-radius:var(--r); }
