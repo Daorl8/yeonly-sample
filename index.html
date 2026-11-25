@@ -1,0 +1,504 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<script>document.documentElement.classList.add('js')</script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>연리뷰티 yeonly beauty | 천안 신방동 속눈썹 펌 · 연장</title>
+<meta name="description" content="편안하게 1인 예약으로 관리받는 속눈썹 샵 연리뷰티. 프리미엄 플랫모와 kc인증받은 글루만 사용합니다. 충남 천안시 동남구 새말4길 6 상가동 106호." />
+<link rel="canonical" href="https://yeonly-sample.lgt3232.workers.dev/" />
+<meta property="og:type" content="website" />
+<meta property="og:locale" content="ko_KR" />
+<meta property="og:site_name" content="연리뷰티" />
+<meta property="og:title" content="연리뷰티 yeonly beauty · 천안 신방동 속눈썹" />
+<meta property="og:description" content="천안 신방동•쌍용동•용곡동 속눈썹 펌 • 연장 전문샵 · 1인 예약" />
+<meta property="og:url" content="https://yeonly-sample.lgt3232.workers.dev/" />
+<meta property="og:image" content="https://yeonly-sample.lgt3232.workers.dev/og-yl.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="theme-color" content="#FBF6F0" />
+<link rel="icon" type="image/png" href="favicon.png" />
+<!-- 시안 도메인 = yeonly-sample.lgt3232.workers.dev. 고객 인계 시 grep lgt3232 → canonical · og:url · og:image · JSON-LD url/image 치환 -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BeautySalon",
+  "name": "연리뷰티",
+  "alternateName": "yeonly beauty",
+  "url": "https://yeonly-sample.lgt3232.workers.dev/",
+  "image": "https://yeonly-sample.lgt3232.workers.dev/og-yl.jpg",
+  "telephone": "+82-507-1357-0462",
+  "address": { "@type": "PostalAddress", "streetAddress": "새말4길 6 상가동 106호", "addressLocality": "천안시 동남구", "addressRegion": "충청남도", "addressCountry": "KR" },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"], "opens": "10:00", "closes": "20:30" }
+  ],
+  "sameAs": ["https://www.instagram.com/yeonly_beauty/", "https://blog.naver.com/wjddus5227", "https://m.place.naver.com/place/1360893874/home"]
+}
+</script>
+<style>
+@font-face{ font-family:"YL Serif"; src:url("yl-cormorant-v01.woff2") format("woff2"); font-weight:400 600; font-style:normal; font-display:swap; }
+@font-face{ font-family:"YL Serif"; src:url("yl-cormorant-i-v01.woff2") format("woff2"); font-weight:400 500; font-style:italic; font-display:swap; }
+@font-face{ font-family:"YL Sans"; src:url("yl-pretendard-v01.woff2") format("woff2"); font-weight:300 700; font-display:swap; }
+:root{
+  --paper:#FBF6F0;      /* 로고 바탕 크림 */
+  --lav:#F3ECF6;        /* 연보라 면 */
+  --pink:#F8E4E9;       /* 연분홍 줄무늬 */
+  --lav-s:#E6DBF0;      /* 연보라 줄무늬 */
+  --ink:#3B2F33;        /* 11.9:1 */
+  --soft:#6E6066;       /* 5.5:1 */
+  --rose:#B07078;       /* 로고 장미색 — 큰 글자 · 장식만(3.6:1) */
+  --rose-d:#8E4F59;     /* 작은 글자 · 버튼 바탕(흰 글자 6.2:1) */
+  --line:#E9DFE3;
+  --r:2px;
+  --serif:"YL Serif","YL Sans",Georgia,sans-serif;
+  --sans:"YL Sans",-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;
+}
+*{ box-sizing:border-box; }
+html{ scroll-behavior:auto; scroll-padding-top:118px; -webkit-text-size-adjust:100%; }
+body{ margin:0; background:var(--paper); color:var(--ink); font-family:var(--sans); font-size:16px; line-height:1.75; word-break:keep-all; overflow-wrap:break-word; -webkit-font-smoothing:antialiased; padding-bottom:calc(66px + env(safe-area-inset-bottom)); }
+img{ display:block; max-width:100%; height:auto; }
+a{ color:inherit; }
+:focus-visible{ outline:2px solid var(--rose-d); outline-offset:3px; }
+[tabindex="-1"]:focus{ outline:none; }
+.nw{ white-space:nowrap; }
+.wrap{ width:min(100% - 40px, 1120px); margin:0 auto; }
+.sr{ position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap; }
+
+/* 줄무늬 띠 (사장님 피드의 연분홍 · 연보라 세로 줄무늬) */
+.stripe{ height:22px; background:repeating-linear-gradient(90deg, var(--pink) 0 14px, var(--paper) 14px 28px); }
+.stripe.lav{ background:repeating-linear-gradient(90deg, var(--lav-s) 0 14px, var(--paper) 14px 28px); }
+
+/* 헤더 */
+.top{ position:sticky; top:0; z-index:50; background:var(--paper); border-bottom:1px solid var(--line); }
+.top .bar{ display:flex; align-items:center; justify-content:space-between; height:62px; }
+.logo img{ height:40px; width:auto; }
+.nav{ display:none; gap:28px; }
+.nav a, .snav a{ font-family:var(--serif); font-style:italic; font-size:1.05rem; text-decoration:none; color:var(--soft); }
+.head-cta{ display:none; }
+.snav{ display:flex; border-top:1px solid var(--line); }
+.snav a{ flex:1 1 0; display:flex; align-items:center; justify-content:center; min-height:42px; white-space:nowrap; font-size:.98rem; }
+@media (min-width:900px){
+  .nav{ display:flex; } .snav{ display:none; } html{ scroll-padding-top:74px; }
+  .top .bar{ height:68px; display:grid; grid-template-columns:minmax(0,1fr) auto minmax(0,1fr); }
+  .head-cta{ display:inline-flex; justify-self:end; }
+}
+@media (hover:hover){ .nav a:hover, .snav a:hover{ color:var(--rose-d); } }
+
+/* 버튼 */
+.btn{ display:inline-flex; align-items:center; justify-content:center; gap:.4em; min-height:50px; padding:0 22px; border:1px solid var(--rose-d); border-radius:var(--r); font-size:.95rem; font-weight:500; text-decoration:none; color:var(--rose-d); background:transparent; transition:background .2s, color .2s; }
+.btn.fill{ background:var(--rose-d); color:#FFFFFF; }
+.head-cta.btn{ min-height:40px; font-size:.86rem; padding:0 16px; }
+.btns{ display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:8px; margin-top:28px; max-width:440px; }
+.btns .btn:first-child{ grid-column:1 / -1; }
+@media (max-width:439.98px){ .btns{ grid-template-columns:minmax(0,1fr); } }
+@media (min-width:900px) and (max-width:1099.98px){ .hero .btns{ grid-template-columns:minmax(0,1fr); } }
+@media (hover:hover){ .btn:hover{ background:var(--rose-d); color:#FFFFFF; } .btn.fill:hover{ background:var(--ink); border-color:var(--ink); } }
+
+/* 라벨 · 제목 */
+.label{ display:flex; align-items:center; gap:10px; margin:0; font-family:var(--serif); font-style:italic; font-size:1.15rem; color:var(--rose-d); }
+.label::before{ content:"\2726"; font-style:normal; font-size:.8rem; color:var(--rose); }
+.label .ko{ font-family:var(--sans); font-style:normal; font-size:.8rem; color:var(--soft); }
+h2{ font-family:var(--sans); font-weight:600; font-size:clamp(1.5rem, 4.6vw, 2.2rem); line-height:1.4; letter-spacing:-.02em; margin:12px 0 0; }
+.lead{ margin:14px 0 0; color:var(--soft); max-width:36em; }
+.sec{ padding:clamp(64px, 10vw, 120px) 0; }
+.sec.lav{ background:var(--lav); }
+
+/* 히어로 */
+.hero{ padding:clamp(28px, 5vw, 64px) 0 clamp(40px, 6vw, 80px); }
+.hero .wrap{ display:grid; gap:40px; align-items:center; }
+.hero h1{ margin:0; }
+.hero h1 img{ width:min(64vw, 300px); }
+.hero .tag{ margin:22px 0 0; font-size:clamp(1.1rem, 3.6vw, 1.35rem); font-weight:600; line-height:1.5; }
+.hero .sub{ margin:12px 0 0; color:var(--soft); }
+.hero .pts{ list-style:none; padding:0; margin:22px 0 0; border-top:1px solid var(--line); }
+.hero .pts li{ display:flex; gap:10px; padding:10px 0; border-bottom:1px solid var(--line); font-size:.95rem; font-weight:500; }
+.hero .pts li::before{ content:"\2726"; color:var(--rose); font-size:.75rem; line-height:2.2; }
+@media (min-width:900px){ .hero .wrap{ grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:64px; } }
+
+/* 폴라로이드 */
+.pola{ margin:0; padding:10px 10px 34px; background:#FFFFFF; box-shadow:0 10px 26px rgba(59,47,51,.12); border-radius:var(--r); position:relative; }
+.pola img{ width:100%; aspect-ratio:1/1; object-fit:cover; }
+.pola::before{ content:""; position:absolute; top:-10px; left:50%; width:70px; height:22px; transform:translateX(-50%) rotate(-3deg); background:rgba(230,219,240,.85); }
+.pola.pk::before{ background:rgba(248,228,233,.9); }
+.pola::after{ content:"\2726"; position:absolute; right:12px; bottom:8px; color:var(--rose); font-size:.85rem; }
+.stack{ position:relative; display:grid; grid-template-columns:repeat(6, minmax(0,1fr)); align-items:start; padding:16px 4px 0; }
+.stack .pola:nth-child(1){ grid-column:1 / span 4; grid-row:1; transform:rotate(-4deg); z-index:2; }
+.stack .pola:nth-child(2){ grid-column:3 / span 4; grid-row:1; margin-top:40%; transform:rotate(3deg); z-index:3; }
+.stack .pola:nth-child(3){ display:none; }
+@media (min-width:900px){
+  .stack{ grid-template-columns:repeat(12, minmax(0,1fr)); padding-top:24px; }
+  .stack .pola:nth-child(1){ grid-column:1 / span 7; }
+  .stack .pola:nth-child(2){ grid-column:6 / span 7; margin-top:24%; }
+  .stack .pola:nth-child(3){ display:block; grid-column:2 / span 5; grid-row:1; margin-top:78%; transform:rotate(-2deg); z-index:4; }
+}
+
+/* Cormorant 숫자는 기본이 올드스타일 → 가격 · 번호는 세운 숫자로 */
+.steps .pr, .steps .no, .ext .pr, .label{ font-variant-numeric:lining-nums; }
+/* 펌 3단계 */
+.steps{ list-style:none; padding:0; margin:44px 0 0; display:grid; gap:14px; }
+.steps li{ position:relative; padding:24px 22px; background:#FFFFFF; border:1px solid var(--line); border-radius:var(--r); }
+.steps .no{ font-family:var(--serif); font-style:italic; font-size:1.05rem; color:var(--rose-d); }
+.steps h3{ margin:6px 0 0; font-size:1.2rem; font-weight:600; }
+.steps h3 small{ display:block; margin-top:2px; font-family:var(--serif); font-style:italic; font-weight:400; font-size:1rem; color:var(--soft); }
+.steps p{ margin:12px 0 0; font-size:.93rem; color:var(--soft); }
+.steps .pr{ margin-top:14px; padding-top:12px; border-top:1px dashed var(--line); font-family:var(--serif); font-size:1.6rem; line-height:1; color:var(--ink); }
+.steps .pr small{ font-family:var(--sans); font-size:.8rem; margin-left:2px; }
+.steps li:last-child{ border-color:var(--rose); }
+.steps li:last-child::after{ content:"PREMIUM"; position:absolute; top:-11px; right:16px; padding:0 10px; background:var(--rose-d); color:#FFFFFF; font-size:.68rem; font-weight:600; letter-spacing:.14em; line-height:22px; border-radius:var(--r); }
+@media (min-width:900px){
+  .steps{ grid-template-columns:repeat(3, minmax(0,1fr)); gap:20px; align-items:end; }
+  .steps li:nth-child(1){ margin-top:80px; }
+  .steps li:nth-child(2){ margin-top:40px; }
+}
+.note{ margin:28px 0 0; padding:18px 20px; background:var(--pink); border-radius:var(--r); font-size:.95rem; }
+.note small{ display:block; margin-top:6px; color:var(--soft); }
+
+/* 연장 종류 */
+.ext{ list-style:none; padding:0; margin:40px 0 0; border-top:1px solid var(--ink); }
+.ext li{ display:grid; grid-template-columns:minmax(0,1fr) auto; gap:4px 18px; padding:22px 0; border-bottom:1px solid var(--line); }
+.ext h3{ margin:0; font-size:1.12rem; font-weight:600; }
+.ext h3 i{ display:block; font-family:var(--serif); font-weight:400; font-size:1.05rem; color:var(--rose-d); }
+@media (min-width:900px){ .ext h3 i{ display:inline; margin-left:8px; } }
+.ext p{ grid-column:1; margin:6px 0 0; font-size:.93rem; color:var(--soft); }
+.ext .pr{ grid-column:2; grid-row:1; font-family:var(--serif); font-size:1.45rem; line-height:1.2; white-space:nowrap; }
+.ext .pr small{ font-family:var(--sans); font-size:.78rem; margin-left:2px; }
+.ext .thick{ display:inline-block; margin-top:8px; padding:2px 10px; background:var(--lav); border-radius:var(--r); font-size:.84rem; color:var(--ink); }
+@media (min-width:900px){ .ext li{ grid-template-columns:240px minmax(0,1fr) auto; align-items:baseline; } .ext p{ grid-column:2; grid-row:1; margin:0; } .ext .pr{ grid-column:3; } }
+
+/* 시술 사진 */
+.gal{ display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:26px 16px; margin-top:44px; padding-top:10px; }
+.gal .pola:nth-child(odd){ transform:rotate(-2deg); }
+.gal .pola:nth-child(even){ transform:rotate(2deg); margin-top:18px; }
+@media (min-width:900px){ .gal{ grid-template-columns:repeat(3, minmax(0,1fr)); gap:44px 36px; } .gal .pola:nth-child(3n+2){ margin-top:36px; } }
+.gal-more{ margin-top:36px; color:var(--soft); font-size:.95rem; }
+.gal-more a{ color:var(--rose-d); text-underline-offset:3px; }
+
+/* 가격 */
+.price{ display:grid; gap:40px; margin-top:40px; }
+.price h3{ display:flex; align-items:baseline; gap:10px; margin:0; padding-bottom:12px; border-bottom:1px solid var(--ink); font-family:var(--serif); font-style:italic; font-weight:400; font-size:1.7rem; }
+.price h3 small{ font-family:var(--sans); font-style:normal; font-size:.86rem; color:var(--soft); }
+.price ul{ list-style:none; margin:0; padding:0; }
+.price li{ display:grid; grid-template-columns:minmax(0,1fr) auto; gap:14px; align-items:baseline; padding:14px 0; border-bottom:1px solid var(--line); }
+.price li b{ font-weight:500; }
+.price li em{ font-style:normal; font-variant-numeric:tabular-nums; white-space:nowrap; font-weight:500; }
+.price-note{ margin-top:26px; color:var(--soft); font-size:.92rem; }
+@media (min-width:768px){ .price{ grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:56px; } }
+
+/* 예약 */
+.book{ display:grid; gap:40px; }
+.book .about{ margin:18px 0 0; font-size:1rem; }
+.book ul{ list-style:none; padding:0; margin:22px 0 0; display:grid; gap:0; border-top:1px solid var(--ink); }
+.book ul li{ display:flex; gap:10px; padding:12px 0; border-bottom:1px solid rgba(59,47,51,.14); font-weight:500; }
+.book ul li::before{ content:"\2726"; color:var(--rose); font-size:.75rem; line-height:2.2; }
+.hours{ width:100%; border-collapse:collapse; }
+.hours caption{ text-align:left; padding-bottom:8px; }
+.hours th, .hours td{ text-align:left; padding:14px 0; border-bottom:1px solid rgba(59,47,51,.14); font-weight:400; }
+.hours th{ width:38%; font-weight:600; }
+.hours td{ font-variant-numeric:tabular-nums; }
+.hnote{ margin:12px 0 0; font-size:.92rem; color:var(--soft); }
+.book .btns{ max-width:none; }
+@media (min-width:900px){ .book{ grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:72px; align-items:center; } }
+
+/* 오시는 길 */
+.visit{ display:grid; gap:32px; margin-top:40px; }
+.visit dl{ margin:0; }
+.visit dt{ font-family:var(--serif); font-style:italic; font-size:1.05rem; color:var(--rose-d); padding-top:16px; }
+.visit dd{ margin:2px 0 0; padding-bottom:16px; border-bottom:1px solid var(--line); }
+.visit dd p{ margin:0 0 4px; }
+.visit dd a{ color:var(--rose-d); text-underline-offset:3px; }
+.map{ width:100%; height:300px; border:0; border-radius:var(--r); background:var(--lav); }
+@media (min-width:768px){ .visit{ grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:56px; } .map{ height:100%; min-height:420px; } }
+
+/* 푸터 · 하단 바 */
+.foot{ padding:48px 0 40px; text-align:center; background:var(--lav); }
+.foot img{ width:150px; margin:0 auto; }
+.foot p{ margin:14px 0 0; font-size:.88rem; color:var(--soft); }
+.foot nav{ display:flex; flex-wrap:wrap; justify-content:center; gap:6px 18px; margin-top:16px; }
+.foot nav a{ font-size:.9rem; color:var(--rose-d); text-underline-offset:3px; }
+.foot small{ display:block; margin-top:24px; font-size:.78rem; color:var(--soft); }
+.quick{ position:fixed; left:0; right:0; bottom:0; z-index:60; display:grid; grid-template-columns:1.4fr 1fr 1fr; gap:6px; padding:8px 10px calc(8px + env(safe-area-inset-bottom)); background:var(--paper); border-top:1px solid var(--line); }
+.quick a{ display:flex; align-items:center; justify-content:center; min-height:48px; border:1px solid var(--rose-d); border-radius:var(--r); font-size:.88rem; font-weight:500; text-decoration:none; color:var(--rose-d); }
+.quick a.fill{ background:var(--rose-d); color:#FFFFFF; }
+@media (min-width:900px){ .quick{ display:none; } body{ padding-bottom:0; } }
+
+/* 나타나기 (강제 재생 · setInterval) */
+.js .reveal{ opacity:0; translate:0 16px; transition:opacity .9s ease var(--d,0s), translate .9s ease var(--d,0s); }
+.js .reveal.in{ opacity:1; translate:0 0; }
+</style>
+<noscript><style>.js .reveal{ opacity:1; translate:0 0; }</style></noscript>
+</head>
+<body>
+<header class="top" id="top">
+  <div class="wrap bar">
+    <a class="logo" href="#top" aria-label="연리뷰티 yeonly beauty 처음으로"><img src="yl-wordmark.png" alt="yeonly beauty" width="420" height="242" /></a>
+    <nav class="nav" aria-label="섹션">
+      <a href="#perm">Perm</a><a href="#extension">Extension</a><a href="#works">Works</a><a href="#price">Price</a><a href="#visit">Visit</a>
+    </nav>
+    <a class="btn fill head-cta" href="https://open.kakao.com/o/sMAdmHXe" target="_blank" rel="noopener">오픈카톡 예약</a>
+  </div>
+  <nav class="snav" aria-label="섹션 바로가기">
+    <a href="#perm">Perm</a><a href="#extension">Extension</a><a href="#works">Works</a><a href="#price">Price</a><a href="#visit">Visit</a>
+  </nav>
+</header>
+
+<main>
+  <section class="hero" aria-labelledby="hero-h">
+    <div class="wrap">
+      <div>
+        <h1 id="hero-h"><img src="yl-logo.png" alt="yeonly beauty since 2022" width="560" height="460" fetchpriority="high" /><span class="sr">연리뷰티</span></h1>
+        <p class="tag">천안 신방동•쌍용동•용곡동 <span class="nw">속눈썹 펌 • 연장 전문샵</span></p>
+        <p class="sub">편안하게 1인 예약으로 관리받는 <span class="nw">속눈썹 샵입니다 :)</span></p>
+        <ul class="pts">
+          <li>깔끔하고 꼼꼼한 시술을 지향</li>
+          <li>프리미엄 플랫모와 kc인증받은 글루만 사용</li>
+        </ul>
+        <div class="btns">
+          <a class="btn fill" href="https://open.kakao.com/o/sMAdmHXe" target="_blank" rel="noopener">오픈카톡 예약</a>
+          <a class="btn" href="tel:050713570462">전화 <span class="nw">0507-1357-0462</span></a>
+          <a class="btn" href="#price">가격 보기</a>
+        </div>
+      </div>
+      <div class="stack" aria-hidden="true">
+        <figure class="pola"><img src="yl-h1.webp" alt="" width="640" height="806" /></figure>
+        <figure class="pola pk"><img src="yl-h2.webp" alt="" width="640" height="640" /></figure>
+        <figure class="pola"><img src="yl-h3.webp" alt="" width="640" height="587" loading="lazy" /></figure>
+      </div>
+    </div>
+  </section>
+
+  <div class="stripe" aria-hidden="true"></div>
+
+  <section class="sec lav" id="perm" aria-labelledby="perm-h">
+    <div class="wrap">
+      <p class="label reveal">Perm<span class="ko">속눈썹 펌</span></p>
+      <h2 id="perm-h" class="reveal">연리뷰티 펌 메뉴는 <span class="nw">총 세 가지</span></h2>
+      <p class="lead reveal">고객님의 속눈썹 상태에 따라서 <span class="nw">선택해 주시면 좋을 거 같아요</span></p>
+      <ol class="steps">
+        <li class="reveal">
+          <span class="no">Step 01</span>
+          <h3>노글루 수분뷰러펌<small>1단계 · 제일 기본 펌</small></h3>
+          <p>눈매에 맞춰 원하시는 컬링으로 <span class="nw">예쁘게 말아드리니 걱정 마세요</span></p>
+          <p class="pr">35,000<small>원</small></p>
+        </li>
+        <li class="reveal">
+          <span class="no">Step 02</span>
+          <h3>노글루 블랙틴팅펌<small>2단계</small></h3>
+          <p>기본 펌에 블랙 틴팅이 들어가요. 속눈썹을 진하게 <span class="nw">코팅해 주는 영양입니다</span></p>
+          <p class="pr">40,000<small>원</small></p>
+        </li>
+        <li class="reveal">
+          <span class="no">Step 03</span>
+          <h3>노글루 더블영양펌<small>3단계 · 연리의 메인 펌</small></h3>
+          <p>블랙 틴팅+케라틴+수분팩까지 세 가지의 영양이 들어가는 <span class="nw">프리미엄 펌입니다</span></p>
+          <p class="pr">45,000<small>원</small></p>
+        </li>
+      </ol>
+      <p class="note reveal">속눈썹이 길고 숱이 풍성한 고객님들은 이렇게 펌만 해도 연장한 거 같은 느낌을 <span class="nw">내실 수 있어요!</span><small>언더펌 25,000원 · 펌+포인트연장(50%) 60,000원</small></p>
+    </div>
+  </section>
+
+  <div class="stripe lav" aria-hidden="true"></div>
+
+  <section class="sec" id="extension" aria-labelledby="ext-h">
+    <div class="wrap">
+      <p class="label reveal">Extension<span class="ko">속눈썹 연장</span></p>
+      <h2 id="ext-h" class="reveal">기본을 잘해야 <span class="nw">그 뒤도 이쁜 법</span></h2>
+      <p class="lead reveal">고객님의 니즈에 맞춰 풍성~ 자연~ <span class="nw">다 조절가능</span></p>
+      <ul class="ext">
+        <li class="reveal">
+          <h3>플랫모 클래식연장<i lang="en">Classic</i></h3>
+          <p>요즘은 야리야리하고 샤랄라~♡ 무드 <span class="nw">정말 가능합니다</span></p>
+          <span class="pr">50,000<small>원</small></span>
+        </li>
+        <li class="reveal">
+          <h3>플랫모 마스카라연장<i lang="en">Mascara</i></h3>
+          <p>마스카라는 0.15 모를 하나씩 <span class="nw">붙여서 뭉치는 거고</span></p>
+          <span class="pr">50,000<small>원</small></span>
+        </li>
+        <li class="reveal">
+          <h3>애니메연장+언더포함<i lang="en">Anime</i></h3>
+          <p>애니메는 0.07 모를 여러 개 뭉쳐서 들어간답니다 · 각자 가진 눈매에 맞춰 <span class="nw">디자인이 들어가는데요!</span></p>
+          <span class="pr">90,000<small>원</small></span>
+        </li>
+        <li class="reveal">
+          <h3>플랫모 더블연장<i lang="en">Double</i></h3>
+          <p>더블도 여리하고 이쁘죠 ??</p>
+          <span class="pr">60,000<small>원</small></span>
+        </li>
+        <li class="reveal">
+          <h3>미세모연장<i lang="en">Fine</i></h3>
+          <span class="pr">55,000<small>원</small></span>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <div class="stripe" aria-hidden="true"></div>
+
+  <section class="sec lav" id="works" aria-labelledby="works-h">
+    <div class="wrap">
+      <p class="label reveal">Works<span class="ko">시술 사진</span></p>
+      <h2 id="works-h" class="reveal">눈매에 맞춰 <span class="nw">원하시는 컬링으로</span></h2>
+      <div class="gal">
+        <figure class="pola reveal"><img src="yl-g1.webp" alt="속눈썹 시술 후 눈매" width="720" height="707" loading="lazy" /></figure>
+        <figure class="pola pk reveal"><img src="yl-g2.webp" alt="속눈썹 시술 후 눈매" width="720" height="684" loading="lazy" /></figure>
+        <figure class="pola reveal"><img src="yl-g3.webp" alt="속눈썹 시술 후 눈매" width="720" height="630" loading="lazy" /></figure>
+        <figure class="pola pk reveal"><img src="yl-g4.webp" alt="속눈썹 시술 후 눈매" width="720" height="613" loading="lazy" /></figure>
+        <figure class="pola reveal"><img src="yl-g5.webp" alt="속눈썹 시술 후 눈매" width="720" height="471" loading="lazy" /></figure>
+        <figure class="pola pk reveal"><img src="yl-g6.webp" alt="속눈썹 시술 후 눈매" width="720" height="600" loading="lazy" /></figure>
+      </div>
+      <p class="gal-more reveal">더 많은 시술 사진은 <a href="https://www.instagram.com/yeonly_beauty/" target="_blank" rel="noopener">인스타그램 @yeonly_beauty</a>와 <a href="https://blog.naver.com/wjddus5227" target="_blank" rel="noopener">블로그</a>에서 <span class="nw">볼 수 있어요.</span></p>
+    </div>
+  </section>
+
+  <div class="stripe lav" aria-hidden="true"></div>
+
+  <section class="sec" id="price" aria-labelledby="price-h">
+    <div class="wrap">
+      <p class="label reveal">Price<span class="ko">가격</span></p>
+      <h2 id="price-h" class="reveal">가격 안내</h2>
+      <div class="price">
+        <div class="reveal">
+          <h3>Perm<small>펌</small></h3>
+          <ul>
+            <li><b>노글루 더블영양펌</b><em>45,000원</em></li>
+            <li><b>노글루 블랙틴팅펌</b><em>40,000원</em></li>
+            <li><b>노글루 수분뷰러펌</b><em>35,000원</em></li>
+            <li><b>언더펌</b><em>25,000원</em></li>
+            <li><b>펌+포인트연장(50%)</b><em>60,000원</em></li>
+          </ul>
+        </div>
+        <div class="reveal">
+          <h3>Extension<small>연장</small></h3>
+          <ul>
+            <li><b>플랫모 클래식연장</b><em>50,000원</em></li>
+            <li><b>플랫모 마스카라연장</b><em>50,000원</em></li>
+            <li><b>플랫모 더블연장</b><em>60,000원</em></li>
+            <li><b>미세모연장</b><em>55,000원</em></li>
+            <li><b>애니메연장+언더포함</b><em>90,000원</em></li>
+            <li><b>언더연장</b><em>25,000원</em></li>
+            <li><b>타샵연장 제거</b><em>5,000원</em></li>
+            <li><b>연장 리터치(2주 이내)</b><em>변동</em></li>
+          </ul>
+        </div>
+      </div>
+      <p class="price-note reveal">네이버 플레이스 가격표 기준이에요. ‘변동’ 항목과 이벤트는 오픈카톡으로 <span class="nw">문의해 주세요.</span></p>
+    </div>
+  </section>
+
+  <div class="stripe" aria-hidden="true"></div>
+
+  <section class="sec lav" id="booking" aria-labelledby="book-h">
+    <div class="wrap book">
+      <div>
+        <p class="label reveal">Booking<span class="ko">예약 안내</span></p>
+        <h2 id="book-h" class="reveal">편안하게 1인 예약으로 <span class="nw">관리받는 속눈썹 샵</span></h2>
+        <p class="about reveal">깔끔하고 꼼꼼한 시술을 지향하며, 좋은 속눈썹 컨디션을 유지할 수 있도록 프리미엄 플랫모와 kc인증받은 글루만 사용합니다.</p>
+        <ul>
+          <li class="reveal"><span>예약문의<br />네이버 톡톡 연리뷰티 <span class="nw">or 오픈카톡</span></span></li>
+          <li class="reveal">언제든지 편하게 문의주세요</li>
+        </ul>
+        <div class="btns reveal">
+          <a class="btn fill" href="https://open.kakao.com/o/sMAdmHXe" target="_blank" rel="noopener">오픈카톡 예약</a>
+          <a class="btn" href="tel:050713570462">전화 문의</a>
+          <a class="btn" href="https://www.instagram.com/yeonly_beauty/" target="_blank" rel="noopener">인스타그램</a>
+        </div>
+      </div>
+      <div class="reveal">
+        <table class="hours">
+          <caption><span class="label">Hours<span class="ko">영업시간</span></span></caption>
+          <tbody>
+            <tr><th scope="row">월 – 일</th><td>10:00 – 20:30</td></tr>
+          </tbody>
+        </table>
+        <p class="hnote">- 휴무 및 영업시간은 예약에 따라 <span class="nw">변동 됩니다.</span></p>
+      </div>
+    </div>
+  </section>
+
+  <div class="stripe lav" aria-hidden="true"></div>
+
+  <section class="sec" id="visit" aria-labelledby="visit-h">
+    <div class="wrap">
+      <p class="label reveal">Visit<span class="ko">오시는 길</span></p>
+      <h2 id="visit-h" class="reveal">신동아 목련아파트 <span class="nw">뒤편 상가입니다</span></h2>
+      <div class="visit">
+        <dl class="reveal">
+          <dt>Address</dt>
+          <dd><p>충남 천안시 동남구 <span class="nw">새말4길 6</span> <span class="nw">상가동 106호</span></p></dd>
+          <dt>Way</dt>
+          <dd><p>(GS25 천안신동아점 편의점에서 <span class="nw">쭉 들어오시면 됩니다)</span></p></dd>
+          <dt>Parking</dt>
+          <dd><p>신동아목련아파트 단지 주차장 이용 또는 쌍용현대아파트 단지에 <span class="nw">주차하셔도 됩니다!</span></p><p>상가 옆에 상가 주차장도 비어있으면 주차 가능하시고 상가 앞 도로에도 주차 <span class="nw">가능 됩니다 :)</span></p></dd>
+          <dt>Tel</dt>
+          <dd><p><a href="tel:050713570462">0507-1357-0462</a></p></dd>
+          <dt>Map</dt>
+          <dd><p><a href="https://map.naver.com/p/entry/place/1360893874" target="_blank" rel="noopener">네이버 지도에서 보기</a></p></dd>
+        </dl>
+        <iframe class="map reveal" title="연리뷰티 위치 지도" src="https://maps.google.com/maps?q=%EC%B6%A9%EB%82%A8%20%EC%B2%9C%EC%95%88%EC%8B%9C%20%EB%8F%99%EB%82%A8%EA%B5%AC%20%EC%83%88%EB%A7%904%EA%B8%B8%206&amp;z=17&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div class="stripe" aria-hidden="true"></div>
+<footer class="foot">
+  <div class="wrap">
+    <img src="yl-wordmark.png" alt="yeonly beauty" width="420" height="242" loading="lazy" />
+    <p>연리뷰티 · 충남 천안시 동남구 <span class="nw">새말4길 6</span> <span class="nw">상가동 106호</span><br />월 – 일 10:00 – 20:30 <span class="nw">(예약에 따라 변동)</span></p>
+    <nav aria-label="푸터 링크">
+      <a href="https://open.kakao.com/o/sMAdmHXe" target="_blank" rel="noopener">오픈카톡</a>
+      <a href="https://www.instagram.com/yeonly_beauty/" target="_blank" rel="noopener">인스타그램</a>
+      <a href="https://blog.naver.com/wjddus5227" target="_blank" rel="noopener">블로그</a>
+      <a href="https://m.place.naver.com/place/1360893874/home" target="_blank" rel="noopener">네이버 플레이스</a>
+    </nav>
+    <small>© yeonly beauty · 샘플 사이트</small>
+  </div>
+</footer>
+
+<nav class="quick" aria-label="빠른 연결">
+  <a class="fill" href="https://open.kakao.com/o/sMAdmHXe" target="_blank" rel="noopener">오픈카톡 예약</a>
+  <a href="tel:050713570462">전화</a>
+  <a href="https://www.instagram.com/yeonly_beauty/" target="_blank" rel="noopener">인스타</a>
+</nav>
+
+<script>
+(function(){
+  var pending=[].slice.call(document.querySelectorAll('.reveal'));
+  pending.forEach(function(el){
+    var sib=[].slice.call(el.parentNode.children).filter(function(c){ return c.classList.contains('reveal'); });
+    if(sib.length>1){ el.style.setProperty('--d',(Math.min(sib.indexOf(el),5)*0.08)+'s'); }
+  });
+  function showAll(){ pending.forEach(function(el){ el.classList.add('in'); }); pending=[]; }
+  var t=setInterval(function(){
+    if(!pending.length){ clearInterval(t); return; }
+    if(window.innerHeight + window.pageYOffset >= document.documentElement.scrollHeight - 4){ showAll(); return; }
+    var line=window.innerHeight*0.9;
+    pending=pending.filter(function(el){
+      if(el.getBoundingClientRect().top < line){ el.classList.add('in'); return false; }
+      return true;
+    });
+  },120);
+  /* 부드러운 스크롤(R-25): rAF 직접 이동 · 폴백 · 휠/터치면 중단 · 끝나면 대상 포커스 */
+  document.addEventListener('click',function(e){
+    var a=e.target.closest ? e.target.closest('a[href^="#"]') : null; if(!a) return;
+    var id=a.getAttribute('href'); if(id.length<2) return;
+    var tg=document.querySelector(id); if(!tg) return;
+    e.preventDefault();
+    var head=document.querySelector('.top'); var off=(head ? head.getBoundingClientRect().height : 0)+10;
+    var y0=window.pageYOffset; var y1=(id==='#top') ? 0 : Math.max(0, tg.getBoundingClientRect().top+y0-off);
+    var dur=700, s0=null, done=false;
+    function ease(p){ return p<.5 ? 4*p*p*p : 1-Math.pow(-2*p+2,3)/2; }
+    function stop(){ done=true; window.removeEventListener('wheel',stop); window.removeEventListener('touchstart',stop); }
+    function finish(){ stop(); if(!tg.hasAttribute('tabindex')){ tg.setAttribute('tabindex','-1'); } tg.focus({preventScroll:true}); }
+    window.addEventListener('wheel',stop,{passive:true}); window.addEventListener('touchstart',stop,{passive:true});
+    function step(ts){ if(done) return; if(s0===null) s0=ts; var p=Math.min((ts-s0)/dur,1); window.scrollTo(0, y0+(y1-y0)*ease(p)); if(p<1){ requestAnimationFrame(step); } else { finish(); } }
+    requestAnimationFrame(step);
+    setTimeout(function(){ if(!done){ window.scrollTo(0,y1); finish(); } }, dur+300);
+    if(history.pushState){ history.pushState(null,'',id); }
+  });
+})();
+</script>
+</body>
+</html>
